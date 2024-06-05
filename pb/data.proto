@@ -1,0 +1,60 @@
+syntax = "proto3";
+
+package main;
+
+option go_package = "/Users/tharunreddy/Desktop/SFTP Project";
+
+import "google/protobuf/timestamp.proto";
+
+
+message ReportDataV4 {
+  string BookingStatus = 1;
+  google.protobuf.Timestamp BookingDate = 2;
+  google.protobuf.Timestamp StartTime = 3;
+  string DeliveryMedium = 4;
+  string Category = 5;
+  int32 Duration = 6;
+  string ServiceType = 7;
+  string ServiceName = 8;
+  string BookingType = 9;
+  string ChannelName = 10;
+  string StaffFirstName = 11;
+  string StaffLastName = 12;
+  string StaffEmail = 13;
+  string StaffRole = 14;
+  string CustomerEmail = 15;
+  string BuildingCode = 16;
+  string RoomName = 17;
+  string RoomCode = 18;
+  string BookingId = 19;
+  string ClassId = 20;
+  string BookedByEmail = 21;
+  google.protobuf.Timestamp UpdatedDateTime = 22;
+  string UpdatedBy = 23;
+  string CostCategory = 24;
+  string CostTier = 25;
+  float AmountPaid = 26;
+  float AmountRefunded = 27;
+  string ReminderSentYn = 28;
+  string ItemType = 29;
+  string CurrencyType = 30;
+  string PaymentStatus = 31;
+  google.protobuf.Timestamp PaymentTimestamp = 32;
+  google.protobuf.Timestamp PaymentRefundDate = 33;
+  string PaymentReason = 34;
+  string Timezone = 35;
+  int64 CapacityConfirmed = 36;
+  int64 CapacityWaitlist = 37;
+  string UserDepartment = 38;
+  string UserBusiness = 39;
+  string DivisionConpanyCode = 40;
+  string LocalStartTime = 41;
+  string DayOfWeek = 42;
+  string LocationCode = 43;
+  string ShiftId = 44;
+  int64 ExternalAttendeesCount = 45;
+}
+
+message ReportsList {
+  repeated ReportDataV4 Reports = 1;
+}
